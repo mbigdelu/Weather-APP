@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios/dist/axios";
 
 const fetchData = async (location, type) => {
   try {
@@ -8,7 +8,7 @@ const fetchData = async (location, type) => {
 
     return response.data;
   } catch (e) {
-    // console.log("there is no data for this name");
+    console.log("there is no data for this name");
   }
 };
 
