@@ -1,4 +1,11 @@
-let cities = ["kamloops", "tehran"];
+let cities = [
+  "kamloops",
+  "tehran",
+  "vancouver",
+  "toronto",
+  "calgary",
+  "kelowna",
+];
 
 function searchCity(city) {
   return cities.includes(city);

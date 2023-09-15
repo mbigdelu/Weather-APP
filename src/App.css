@@ -17,6 +17,7 @@ body {
 
 .box-app {
   position: relative;
+  overflow-y: auto;
   width: 580px;
   height: 420px;
   margin: 200px auto 100px auto;
@@ -219,4 +220,38 @@ input:focus {
 }
 .toggle-in:checked + .toggle-label:before {
   right: 0px;
+}
+
+/* Favorite Cities */
+
+.FC-box {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 600px;
+  overflow: auto;
+}
+
+.FC-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3rem 0;
+  padding: 0;
+}
+.FC-td {
+  padding: 0.5rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: left;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 2rem;
+}
+.FC-td > tr:first-child td {
+  border-top: none;
+}
+.FC-td > tr:last-child td {
+  border-bottom: none;
 }
