@@ -10,7 +10,12 @@ import {
   WiDaySunny,
 } from "react-icons/wi";
 
-const size = 150;
+let size = 150;
+
+if (window.innerWidth < 600) {
+  size = 75;
+}
+
 let icon = null;
 
 const handleIcon = (data) => {

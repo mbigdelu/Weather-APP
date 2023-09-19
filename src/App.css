@@ -13,11 +13,12 @@ body {
   padding-right: 40px;
   padding-left: 40px;
   color: #fff;
+  overflow: hidden;
 }
 
 .box-app {
   position: relative;
-  overflow-y: auto;
+  overflow: hidden;
   width: 580px;
   height: 420px;
   margin: 200px auto 100px auto;
@@ -231,7 +232,18 @@ input:focus {
   transform: translate(-50%, -50%);
   height: 500px;
   width: 600px;
-  overflow: auto;
+  overflow: hidden;
+}
+
+.FC-table-box {
+  max-height: 400px;
+  overflow-y: scroll;
+  -webkit-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.FC-table-box::-webkit-scrollbar {
+  width: 0;
 }
 
 .FC-table {
@@ -240,18 +252,84 @@ input:focus {
   margin: 3rem 0;
   padding: 0;
 }
+
+.FC-tr {
+  width: 100%;
+}
+
 .FC-td {
-  padding: 0.5rem;
+  padding: 0;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
   text-align: left;
   font-size: 1.5rem;
   text-transform: capitalize;
-  padding: 2rem;
+  padding: 2rem 1rem 2rem 0;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
+
+.FC-link {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
 .FC-td > tr:first-child td {
   border-top: none;
 }
 .FC-td > tr:last-child td {
   border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-left: 0;
+    min-width: 360px;
+  }
+  .box-app {
+    width: 340px;
+    position: fixed;
+    margin: 10% auto 10% auto;
+    padding: 20px 20px 20px 30px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .header {
+    display: grid;
+    width: 360px;
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .title {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .input {
+    font-size: 1.5rem;
+    width: 8rem;
+    text-align: center;
+  }
+  .current-box {
+    display: block;
+    overflow-y: scroll;
+    padding: 10px;
+    width: 200px;
+    margin-left: 55px;
+  }
+  .temp {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 30px;
+  }
+  .cloud {
+    display: block;
+  }
+  .current-text {
+    display: block;
+  }
 }
