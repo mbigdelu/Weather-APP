@@ -46,7 +46,11 @@ class CurrentApp extends Component {
             {this.ListButton()}
           </Link>
         </div>
-        <input className="input" onChange={this.props.onChange} />
+        <input
+          className="input"
+          onChange={this.props.onChange}
+          value={this.props.city}
+        />
         {data && data.current && (
           <div className="box">
             <div className="current-box">
