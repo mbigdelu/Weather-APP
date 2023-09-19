@@ -42,8 +42,10 @@ function App() {
   const onLike = () => {
     if (isLiked) {
       removeCity(data.location.name.toLowerCase());
+      setIsLiked(false);
     } else {
       addCity(data.location.name.toLowerCase());
+      setIsLiked(true);
     }
   };
 
