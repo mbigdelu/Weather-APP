@@ -45,7 +45,6 @@ function App() {
     } else {
       addCity(data.location.name.toLowerCase());
     }
-    setCity(""); // Clear the city to trigger a re-fetch
   };
 
   const handleSearchChange = (e) => {
