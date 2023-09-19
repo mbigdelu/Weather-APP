@@ -154,6 +154,12 @@ input:focus {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding: 2.5rem;
+  -webkit-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.current-box::-webkit-scrollbar {
+  width: 0;
 }
 
 .temp {
@@ -234,6 +240,16 @@ input:focus {
   width: 600px;
   overflow: hidden;
 }
+.FC-header-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+}
+.FC-header {
+  transform: translate(0, 13px);
+}
 
 .FC-table-box {
   max-height: 400px;
@@ -255,6 +271,10 @@ input:focus {
 
 .FC-tr {
   width: 100%;
+}
+.FC-back-btn {
+  width: 30px;
+  height: 30px;
 }
 
 .FC-td {
@@ -300,6 +320,22 @@ input:focus {
     display: grid;
     width: 360px;
     grid-template-columns: 30% 30% 30%;
+  }
+
+  .FC-header-box {
+    font-size: 1.5rem;
+    display: grid;
+    width: 360px;
+    height: 70px;
+    grid-template-columns: 30% 50% 30%;
+    left: -50%;
+    transform: translate(30%, 5%);
+  }
+
+  .FC-header {
+    margin-top: 8px;
+    padding-left: 20px;
+    font-size: 1.5rem;
   }
 
   .title {
