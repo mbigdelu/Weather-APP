@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CloudIcon from "../component/UI/cloudIconRender";
 import { Link } from "react-router-dom";
 import { WiDegrees } from "react-icons/wi";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { BsList } from "react-icons/bs";
 
 class CurrentApp extends Component {
   state = {
@@ -13,9 +15,7 @@ class CurrentApp extends Component {
   FavoriteButton(liked) {
     return (
       <button className="btn btn-round" onClick={this.props.onLike}>
-        <i
-          className={liked ? "fa  fa-heart fa-2x" : "fa  fa-heart-o fa-2x"}
-        ></i>
+        {liked ? <AiFillHeart size={30} /> : <AiOutlineHeart size={30} />}
       </button>
     );
   }
@@ -23,7 +23,7 @@ class CurrentApp extends Component {
   ListButton() {
     return (
       <button className="btn btn-round">
-        <i class="fa fa-list-ul fa-2x"></i>
+        <BsList size={30} />
       </button>
     );
   }
@@ -35,7 +35,6 @@ class CurrentApp extends Component {
   render() {
     const data = this.props.data;
     const isLiked = this.props.isLiked;
-    // data && data.location && console.log(this.state.data, this.state.city);
     return (
       <div>
         <div className="header">
